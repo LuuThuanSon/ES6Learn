@@ -3,7 +3,7 @@ class person {
 
     constructor(name: string) {
         this.name = name
-        console.log(name)
+        console.log(name + "person constructor")
     }
     run() {
         console.log("run....")
@@ -13,7 +13,18 @@ class person {
     }
 }
 
+class employees extends person{
+    constructor(name :string)
+    {
+        super(name)
+        console.log(name + + "employees constructor")
+    }
+    
+}
+
 let p1 = new person("Son")
 p1.run()
 person.talk();
 console.log(p1.run === person.prototype.run)
+
+let e = new employees("E")
